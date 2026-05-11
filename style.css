@@ -1,0 +1,202 @@
+/* Mengatur ulang gaya dasar browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Gaya Navigasi (Navbar) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #2c3e50;
+    color: white;
+    position: sticky; /* Membuat navbar tetap di atas saat digulir */
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Gaya Bagian Umum */
+.section {
+    padding: 60px 10%;
+    background-color: white;
+}
+
+.bg-light {
+    background-color: #f1f5f8;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+/* Gaya Bagian Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    padding: 0 10%;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Gaya Kartu (Untuk Pendidikan & Pengalaman) */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.card h3 {
+    color: #2980b9;
+}
+
+.project-card-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.project-card-text {
+    flex: 1 1 400px;
+}
+
+.project-card-image {
+    flex: 0 0 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-tools {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.project-tools img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+/* Gaya Keahlian */
+.skills-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-box {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+}
+
+/* Gaya Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}
