@@ -1,4 +1,4 @@
-/* Mengatur ulang gaya dasar browser */
+/* --- Reset & Base Styles --- */
 * {
     margin: 0;
     padding: 0;
@@ -10,193 +10,270 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
-}
-
-/* Gaya Navigasi (Navbar) */
-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background-color: #2c3e50;
-    color: white;
-    position: sticky; /* Membuat navbar tetap di atas saat digulir */
-    top: 0;
-    z-index: 1000;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+main {
+    flex: 1;
+}
+
+/* --- Navigation (Hamburger di Kiri) --- */
+nav {
+    background-color: #2c3e50;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+
+/* Tampilan Ikon Garis 3 */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 101;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Tampilan Sidebar Menu (Tersembunyi di Kiri) */
 .nav-links {
     list-style: none;
+    position: absolute;
+    top: 100%;
+    left: -100%; /* Disembunyikan ke luar layar kiri */
+    background-color: #2c3e50;
+    width: 250px;
+    height: 100vh;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
 }
 
-.nav-links a {
-    color: white;
+/* Class untuk memunculkan menu */
+.nav-links.active {
+    left: 0; 
+}
+
+.nav-links li a {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    display: block;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
     color: #3498db;
 }
 
-/* Gaya Bagian Umum */
+/* Animasi Ikon Hamburger jadi (X) */
+.menu-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.menu-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/* --- Layouts & Containers --- */
 .section {
-    padding: 60px 10%;
-    background-color: white;
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .bg-light {
-    background-color: #f1f5f8;
+    background-color: #eef2f5;
+    border-radius: 10px;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
+    font-size: 2rem;
     color: #2c3e50;
-    font-size: 2.5rem;
 }
 
-/* Gaya Bagian Hero */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, #3498db, #2c3e50);
-    color: white;
-    padding: 0 10%;
-}
-
+/* --- Hero / About Section --- */
 .hero-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: left;
-    max-width: 1200px;
-    width: 100%;
+    gap: 3rem;
 }
 
 .text-content {
     flex: 1;
-    margin-right: 40px;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.text-content h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #555;
 }
 
 .profile-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
-    border: 5px solid white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-}
-
-.hero h2 {
-    color: #ecf0f1;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: white;
-    color: #2c3e50;
+    padding: 0.6rem 1.5rem;
+    background-color: #3498db;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
     font-weight: bold;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
 }
 
-/* Gaya Kartu (Untuk Pendidikan & Pengalaman) */
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* --- Cards (Education & Projects) --- */
 .card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 5px solid #3498db;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 5px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
 }
 
 .card h3 {
-    color: #2980b9;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
 }
 
 .project-card-content {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
+    align-items: center;
+    gap: 2rem;
 }
 
 .project-card-text {
-    flex: 1 1 400px;
+    flex: 1;
 }
 
 .project-card-image {
-    flex: 0 0 320px;
+    flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .project-image {
-    width: 100%;
-    max-width: 320px;
+    max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .project-tools {
+    margin: 1rem 0;
     display: flex;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
-    align-items: center;
-    margin-top: 12px;
 }
 
 .project-tools img {
-    width: 80px;
-    height: 80px;
+    height: 30px;
     object-fit: contain;
-    border-radius: 8px;
-    background: white;
-    padding: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
-/* Gaya Keahlian */
+/* --- Skills Section --- */
 .skills-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
 .skill-box {
-    background: #ecf0f1;
-    padding: 20px;
-    border-radius: 8px;
-    width: 30%;
-    min-width: 250px;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     text-align: center;
 }
 
-/* Gaya Footer */
+.skill-box h3 {
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+/* --- Footer --- */
 footer {
-    text-align: center;
-    padding: 20px;
     background-color: #2c3e50;
-    color: white;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN (Media Queries) 
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* Ubah Hero Section agar gambar di atas dan teks di bawah */
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .text-content h2 {
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Ubah Project Cards agar gambar dan teks bertumpuk vertikal */
+    .project-card-content {
+        flex-direction: column;
+    }
+    
+    .project-card-image {
+        width: 100%;
+    }
 }
