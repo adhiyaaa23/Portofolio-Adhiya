@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('mobile-menu');
-    const navLinks = document.getElementById('nav-links');
+    const sidebar = document.getElementById('sidebar');
 
-    // Menambahkan event klik pada ikon hamburger
     menuToggle.addEventListener('click', function() {
-        // Mengubah ikon menjadi X
+        // Efek garis 3 berubah jadi X
         menuToggle.classList.toggle('is-active');
-        // Menampilkan atau menyembunyikan menu dari kiri
-        navLinks.classList.toggle('active');
+        // Memunculkan/menyembunyikan sidebar dari kiri
+        sidebar.classList.toggle('active');
     });
 });
