@@ -91,7 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // ===========================
 // 5. PAGE LOADER
 // ===========================
-window.addEventListener("load", () => {
+// Mengganti "load" menjadi "DOMContentLoaded" agar lebih responsif
+document.addEventListener("DOMContentLoaded", () => {
     const loader = document.getElementById("loader");
     
     // Beri jeda sekitar 1.8 detik agar animasi progress bar di CSS selesai terlebih dahulu
