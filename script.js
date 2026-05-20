@@ -2,10 +2,32 @@
    PORTFOLIO SCRIPT — Interactive & Animated
 ============================================= */
 
-// ── Page Loader ──────────────────────────────
+// ── Page Loader + Curtain Entrance ───────────
 window.addEventListener('load', () => {
+    const loader  = document.getElementById('loader');
+    const curtain = document.getElementById('curtain');
+
+    // Step 1: Hide loader after 1.9s
     setTimeout(() => {
-        document.getElementById('loader').classList.add('hidden');
+        loader.classList.add('hidden');
+
+        // Step 2: Tiny pause, then curtain sweeps up (100ms)
+        setTimeout(() => {
+            curtain.classList.add('exit');
+
+            // Step 3: After curtain fully gone (~1.1s), reveal content
+            setTimeout(() => {
+                document.body.classList.add('page-entered');
+
+                // Cleanup curtain from DOM
+                curtain.addEventListener('transitionend', () => {
+                    curtain.remove();
+                }, { once: true });
+
+            }, 1100);
+
+        }, 100);
+
     }, 1900);
 });
 
