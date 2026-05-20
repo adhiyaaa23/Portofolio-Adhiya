@@ -86,6 +86,81 @@ body {
 @keyframes fillBar { to { width:100%; } }
 
 /* ===========================
+   ENTRANCE TRANSITION
+=========================== */
+
+/* Curtain panels — 5 vertical strips that wipe upward */
+.curtain-container {
+    position: fixed; inset: 0;
+    z-index: 9998;
+    display: flex;
+    pointer-events: none;
+}
+
+.curtain-panel {
+    flex: 1;
+    background: var(--accent);
+    transform: translateY(0);
+    transition: transform 0.8s var(--ease-out);
+}
+
+/* Each panel is a slightly different shade for a layered look */
+.curtain-panel:nth-child(1) { background: #0a0f1e; transition-delay: 0.00s; }
+.curtain-panel:nth-child(2) { background: #0c1220; transition-delay: 0.06s; }
+.curtain-panel:nth-child(3) { background: #0e1422; transition-delay: 0.12s; }
+.curtain-panel:nth-child(4) { background: #0c1220; transition-delay: 0.18s; }
+.curtain-panel:nth-child(5) { background: #0a0f1e; transition-delay: 0.24s; }
+
+/* Glowing accent strip at bottom edge of each panel */
+.curtain-panel::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent-warm), transparent);
+    opacity: 0.9;
+}
+
+/* State: panels fly upward off screen */
+.curtain-container.exit .curtain-panel {
+    transform: translateY(-100%);
+}
+
+/* ── Hero content: hidden until page-entered class ── */
+body:not(.page-entered) .hero .reveal-up,
+body:not(.page-entered) .hero .reveal-scale {
+    opacity: 0 !important;
+    animation: none !important;
+}
+
+/* Once page-entered, re-trigger hero animations with offset timing 
+   (post-curtain = add ~0.5s base delay) */
+body.page-entered .hero .reveal-up {
+    animation: heroReveal 0.9s var(--ease-out) forwards;
+    animation-delay: calc(var(--delay, 0s) + 0.5s);
+}
+body.page-entered .hero .reveal-scale {
+    animation: heroScale 0.9s var(--ease-out) forwards;
+    animation-delay: calc(var(--delay, 0s) + 0.5s);
+}
+body.page-entered .hero .scroll-hint {
+    animation: fadeInUp 0.9s calc(0.5s + 0.8s) var(--ease-out) both;
+}
+
+/* Navbar also entrance-animates after curtain */
+body:not(.page-entered) .nav-logo,
+body:not(.page-entered) .nav-links {
+    animation: none !important;
+    opacity: 0;
+}
+body.page-entered .nav-logo {
+    animation: fadeIn 0.6s 0.9s forwards;
+}
+body.page-entered .nav-links {
+    animation: fadeIn 0.6s 1.05s forwards;
+}
+
+/* ===========================
    CUSTOM CURSOR
 =========================== */
 .cursor {
