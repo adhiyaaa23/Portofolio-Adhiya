@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Muhammad Adhiya Hartono</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="page-loader" id="loader">
+        <div class="loader-text">
+            <span>A</span><span>D</span><span>H</span><span>I</span><span>Y</span><span>A</span>
+        </div>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Noise -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-logo">MAH<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about"     class="mobile-link">About</a></li>
+            <li><a href="#education" class="mobile-link">Education</a></li>
+            <li><a href="#projects"  class="mobile-link">Projects</a></li>
+            <li><a href="#skills"    class="mobile-link">Skills</a></li>
+        </ul>
+    </div>
+
+    <!-- ── HERO ── -->
+    <section id="about" class="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="text-content">
+                <div class="hero-badge reveal-up" style="--delay:0.2s">Statistics · Data · Analytics</div>
+                <h1 class="hero-name reveal-up" style="--delay:0.35s">
+                    <span class="name-line">Muhammad</span>
+                    <span class="name-line accent-line">Adhiya</span>
+                    <span class="name-line">Hartono</span>
+                </h1>
+                <p class="hero-tagline reveal-up" style="--delay:0.5s">Statistics Student &amp; Data Enthusiast</p>
+                <p class="hero-desc reveal-up" style="--delay:0.65s">A sixth-semester Statistics student at Brawijaya University with an interest in data analysis. Experienced in processing, analyzing, and interpreting data to support decision-making.</p>
+                <div class="contact-row reveal-up" style="--delay:0.8s">
+                    <span class="contact-chip">📍 Bekasi, West Java</span>
+                    <span class="contact-chip">📞 +6281389007830</span>
+                    <span class="contact-chip">✉️ adhiyamuhammad@student.ub.ac.id</span>
+                </div>
+                <div class="hero-cta reveal-up" style="--delay:0.95s">
+                    <a href="https://www.linkedin.com/in/muhammad-adhiya" target="_blank" class="btn-primary">
+                        <span>LinkedIn Profile</span>
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+                    <a href="#projects" class="btn-ghost">View Projects</a>
+                </div>
+            </div>
+
+            <div class="profile-wrapper reveal-scale" style="--delay:0.45s">
+                <div class="profile-ring ring-1"></div>
+                <div class="profile-ring ring-2"></div>
+                <div class="profile-ring ring-3"></div>
+                <img src="arya.jpg" alt="Foto Profil Muhammad Adhiya Hartono" class="profile-photo">
+                <div class="profile-badge">
+                    <span>6</span>
+                    <span>Semester</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll hint — in normal flow, below hero-content -->
+        <a href="#education" class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </a>
+    </section>
+
+    <!-- ── EDUCATION ── -->
+    <section id="education" class="section">
+        <div class="section-label reveal-up">Education</div>
+        <h2 class="reveal-up">Academic Background</h2>
+        <div class="card reveal-up" style="--delay:0.15s">
+            <div class="card-accent"></div>
+            <div class="card-inner">
+                <div class="card-header">
+                    <div>
+                        <h3>Universitas Brawijaya, Malang</h3>
+                        <p class="card-meta"><strong>Bachelor of Statistics</strong> | Aug 2023 – Present</p>
+                    </div>
+                    <div class="card-badge">Active</div>
+                </div>
+                <p class="card-courses"><strong>Related Courses:</strong> Basic Programming, Data Base, Statistical Computation, Data Structure, Linear Models, Categorical Data Analysis, Data Mining, Regression Analysis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects" class="section bg-dark">
+        <div class="section-label reveal-up">Projects</div>
+        <h2 class="reveal-up">Selected Work</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card reveal-up" style="--delay:0.1s">
+                <div class="project-number">01</div>
+                <div class="project-body">
+                    <h3>Kasir Chatbot</h3>
+                    <p>A chatbot for cashier operations built using Google Colab and Gemini API.</p>
+                    <div class="tag-row">
+                        <span class="tag">Google Colab</span>
+                        <span class="tag">Gemini API</span>
+                    </div>
+                    <div class="project-tools">
+                        <img src="colab.png" alt="Google Colab">
+                        <img src="gemini api.png" alt="Gemini API">
+                    </div>
+                    <a href="https://github.com/adhiyaaa23/Kasir-Chatbot/blob/main/Chatbot%20Kasir.ipynb" target="_blank" class="btn-link">View on GitHub →</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal-up" style="--delay:0.2s">
+                <div class="project-number">04</div>
+                <div class="project-body">
+                    <h3>Simulasi Dataset Logistik</h3>
+                    <p>Membuat 1.000 data simulasi pengiriman logistik. Menyuntikkan anomali keterlambatan ekstrem pada 5 tanggal tertentu — ideal untuk melatih model Machine Learning deteksi anomali rantai pasok.</p>
+                    <div class="tag-row">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                    <div class="project-tools">
+                        <img src="python.png" alt="Python">
+                        <img src="colab.png" alt="Google Colab">
+                    </div>
+                    <a href="https://github.com/adhiyaaa23/Simulasi-Dataset-Logistik/blob/main/Simulasi_Dataset_Logistik_Injeksi_Anomali_Keterlambatan_Pengiriman.ipynb" target="_blank" class="btn-link">View on GitHub →</a>
+                </div>
+            </div>
+
+            <div class="project-card wide reveal-up" style="--delay:0.15s">
+                <div class="project-number">02</div>
+                <div class="project-body with-image">
+                    <div class="project-text-col">
+                        <h3>Chatbot Supply Chain</h3>
+                        <p>Asisten AI cerdas untuk Astra UD Trucks yang memprediksi permintaan suku cadang langka menggunakan pemodelan statistik. Dilengkapi chatbot cerdas untuk memberi rekomendasi restock instan dan mencegah armada pelanggan menganggur.</p>
+                        <div class="tag-row">
+                            <span class="tag">Python</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">Gemini API</span>
+                        </div>
+                        <div class="project-tools">
+                            <img src="python.png" alt="Python">
+                            <img src="streamlit.jpg" alt="Streamlit">
+                            <img src="gemini api.png" alt="Gemini API">
+                        </div>
+                        <a href="https://github.com/adhiyaaa23/Chatbot-Supply-Chain/blob/main/nexusgen_supply_chain.ipynb" target="_blank" class="btn-link">View on GitHub →</a>
+                    </div>
+                    <div class="project-img-col">
+                        <img src="Supply Chain.png" alt="Output Chatbot Supply Chain" class="project-screenshot">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card wide reveal-up" style="--delay:0.25s">
+                <div class="project-number">03</div>
+                <div class="project-body with-image">
+                    <div class="project-text-col">
+                        <h3>IoT-Energy Optimization Twin</h3>
+                        <p>Digital Twin untuk PT AHM yang mendeteksi pemborosan listrik secara real-time berbasis IoT dan statistik (SPC). Sistem ini otomatis memberikan rekomendasi setting mesin paling hemat energi tanpa memperlambat target produksi.</p>
+                        <div class="tag-row">
+                            <span class="tag">Python</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">IoT / SPC</span>
+                        </div>
+                        <div class="project-tools">
+                            <img src="python.png" alt="Python">
+                            <img src="streamlit.jpg" alt="Streamlit">
+                        </div>
+                        <a href="https://github.com/adhiyaaa23/Dashboard-Optimization/blob/main/ecosense_iot_optimization.ipynb" target="_blank" class="btn-link">View on GitHub →</a>
+                    </div>
+                    <div class="project-img-col">
+                        <img src="Digital Twin.png" alt="Output IoT-Energy Optimization Twin" class="project-screenshot">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card wide reveal-up" style="--delay:0.35s">
+                <div class="project-number">05</div>
+                <div class="project-body with-image">
+                    <div class="project-text-col">
+                        <h3>Kimia Farma Performance Analytics</h3>
+                        <p>Mengevaluasi kinerja bisnis Kimia Farma (2020–2023) dengan menganalisis tren pendapatan, profitabilitas regional, dan kualitas layanan pelanggan. Fokusnya memetakan dominasi pasar di Jawa serta mengidentifikasi celah antara kualitas fasilitas cabang dan kepuasan transaksi.</p>
+                        <div class="tag-row">
+                            <span class="tag">BigQuery</span>
+                            <span class="tag">Looker Studio</span>
+                            <span class="tag">Excel</span>
+                        </div>
+                        <div class="project-tools">
+                            <img src="looker studio.jpg" alt="Looker Studio">
+                            <img src="bigquery.png" alt="BigQuery">
+                            <img src="excel.jpg" alt="Excel">
+                        </div>
+                    </div>
+                    <div class="project-img-col">
+                        <img src="rakamin.png" alt="Output Kimia Farma Analytics" class="project-screenshot">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills" class="section">
+        <div class="section-label reveal-up">Skills</div>
+        <h2 class="reveal-up">Skills &amp; Languages</h2>
+        <div class="skills-grid">
+            <div class="skill-card reveal-up" style="--delay:0.1s">
+                <div class="skill-icon">⚙️</div>
+                <h3>Hard Skills</h3>
+                <ul class="skill-list">
+                    <li>Python</li>
+                    <li>R</li>
+                    <li>MySQL</li>
+                    <li>Microsoft Office</li>
+                    <li>Google Workspace</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal-up" style="--delay:0.22s">
+                <div class="skill-icon">🧠</div>
+                <h3>Soft Skills</h3>
+                <ul class="skill-list">
+                    <li>Leadership</li>
+                    <li>Critical Thinking</li>
+                    <li>Problem Solving</li>
+                    <li>Teamwork</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal-up" style="--delay:0.34s">
+                <div class="skill-icon">🌐</div>
+                <h3>Languages</h3>
+                <ul class="skill-list">
+                    <li>Bahasa Indonesia <span class="level native">Native</span></li>
+                    <li>English <span class="level">Intermediate</span></li>
+                    <li>Arabic <span class="level">Intermediate</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">MAH<span class="dot">.</span></div>
+            <p>© 2026 Muhammad Adhiya Hartono. All Rights Reserved.</p>
+            <a href="https://www.linkedin.com/in/muhammad-adhiya" target="_blank" class="footer-link">LinkedIn ↗</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
