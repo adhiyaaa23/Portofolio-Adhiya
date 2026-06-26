@@ -34,6 +34,7 @@ Personal portfolio website of **Muhammad Ad'hiya Hartono (Aryaa)** — a Statist
 | 04 | Simulasi Dataset Logistik | Python, Machine Learning | [Run in Colab](https://colab.research.google.com/github/adhiyaaa23/Simulasi-Dataset-Logistik/blob/main/Simulasi_Dataset_Logistik_Injeksi_Anomali_Keterlambatan_Pengiriman.ipynb) |
 | 05 | Kimia Farma Performance Analytics | BigQuery, Looker Studio, Excel | — |
 | 06 | Smart Energy Management System (SEMS) | HTML5 Canvas, Vanilla JS, Chart.js | [Live Demo](https://adhiyaaa23.github.io/Smart-Energy-Management-System/) · [Source](https://github.com/adhiyaaa23/Smart-Energy-Management-System) |
+| 07 | SARA — Smart Reservation Assistant for Restaurant | Python, Streamlit, MySQL, Gemini API | [Live Demo](https://smart-reservation-restaurantt-ptufdwfdauksbydu6qieu5.streamlit.app) · [Source](https://github.com/dnldsmrr/Smart-Reservation-Restaurantt) |
 
 > Full write-ups (problem, approach, and impact) for every project are on the live site.
 

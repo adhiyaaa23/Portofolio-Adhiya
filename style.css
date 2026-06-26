@@ -745,6 +745,10 @@ h2 {
     background: var(--accent-green);
     box-shadow: 0 0 8px var(--accent-green);
 }
+.demo-note {
+    margin-top: 10px; font-size: 0.78rem; line-height: 1.6;
+    color: var(--text-dim); font-style: italic;
+}
 .project-card:hover .project-screenshot {
     transform: scale(1.03) perspective(800px) rotateY(-2deg);
     box-shadow: 0 20px 60px rgba(0,0,0,0.6);
